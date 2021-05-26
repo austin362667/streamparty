@@ -22,6 +22,8 @@ const cors = require('cors');
 
 require('dotenv').config()
 
+app.use(express.static('../client/build'));
+
 // let currVideo = {}; // Video playing in room
 
 io.on('connection', (socket) => {
@@ -157,7 +159,7 @@ io.on('connection', (socket) => {
 
 });
 
-app.use(express.static('../client/build'));
+
 app.use(router);
 app.use(cors());
 
