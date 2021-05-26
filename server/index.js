@@ -157,6 +157,7 @@ io.on('connection', (socket) => {
 
 });
 
+app.use(express.static('../client/build'));
 app.use(router);
 app.use(cors());
 
