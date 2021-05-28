@@ -359,7 +359,7 @@ function Player({ videoProps, sendVideoState, updateVideoProps, loadVideo, loadF
                     onPlay={onPlay}
                     onPause={onPause}
                     config={{
-                        file: {
+                        youtube: {
                             attributes: {
                                 crossOrigin: "anonymous",
                             },
