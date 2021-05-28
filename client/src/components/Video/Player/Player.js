@@ -360,6 +360,9 @@ function Player({ videoProps, sendVideoState, updateVideoProps, loadVideo, loadF
                     onPause={onPause}
                     config={{
                         youtube: {
+                          playerVars: { showinfo: 1 }
+                        },
+                        file: {
                             attributes: {
                                 crossOrigin: "anonymous",
                             },
