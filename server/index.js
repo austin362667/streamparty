@@ -2,6 +2,14 @@ const express = require('express');
 const socketio = require('socket.io');
 const http = require('http');
 const path = require('path');
+const fs = require('fs');
+const https = require('https')
+
+var options = {
+  key: fs.readFileSync('/etc/letsencrypt/live/lattemall.company/privkey.pem'),
+  ca: [fs.readFileSync('/etc/letsencrypt/live/lattemall.company/fullchain.pem')],
+  cert: fs.readFileSync('/etc/letsencrypt/live/lattemall.company/fullchain.pem')
+};
 
 
 const {
@@ -15,10 +23,10 @@ const {
 } = require('./users.js');
 const { getActiveRooms } = require('./rooms.js');
 
-const PORT = process.env.PORT || 5000;
+const PORT = 443; // process.env.PORT || 5000;
 const router = require('./router');
 const app = express();
-const server = http.createServer(app);
+const server = https.createServer(options, app);
 const io = socketio(server);
 const cors = require('cors');
 
