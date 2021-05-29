@@ -153,7 +153,7 @@ const Room = ({ location, history, match }) => {
                     localAudioStream.init(); 
                     client.join('006c0fbe3dfdd7c45c8bedac54be5f4fc90IAC2D3taBFp4HZGh1n9EgqrSWAoS3Vu5JJR0qVBWzhlhkYun+iQAAAAAEADEZWnp3tCzYAEAAQDe0LNg', 'main', 'name');
                     client.publish(localAudioStream);
-                    remoteStream.play("body");
+                    document.querySelector('#remoteStream').play("body");
                     
                     sckt.socket.emit('join', { name, room, colors }, ({ id }) => {
                         updateCurrUser({ id });
@@ -190,13 +190,13 @@ const Room = ({ location, history, match }) => {
     // }, [videoProps.playing])
 
     return (
-        <div className="outerContainer">
+        <div className="outerContainer" id="remoteStream">
             <Transition visible={!isJoined} animation='fade' duration={500}>
                 <Dimmer active={!isJoined}>
                     <Loader>Joining Room...</Loader>
                 </Dimmer>
             </Transition>
-            <Video
+            <Video 
                 log={log}
                 currUser={currUser}
                 room={room}
