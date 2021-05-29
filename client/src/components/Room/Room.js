@@ -228,8 +228,7 @@ const [inCall, setInCall, channelName] = useState(false);
                   Join Call
                 </Button>
               )}
-            </div>
-        </div>
+          </div>
     );
 }
 
