@@ -12,7 +12,6 @@ import { Button } from "@material-ui/core";
 import VideoCall from "./VideoCall";
 
 function App() {
-  const [inCall, setInCall] = useState(false);
 
   return (
     <div>
@@ -25,7 +24,8 @@ function App() {
                 {/* <Route path="/browse" component={Browse} /> */}
             </Switch>
         </Router>
-    )
+     <div>
+    );
 }
 
 export default App;
