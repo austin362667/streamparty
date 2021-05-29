@@ -182,7 +182,7 @@ const Room = ({ location, history, match }) => {
     //     console.log(videoProps.playing);
     // }, [videoProps.playing])
     
-const [inCall, setInCall] = useState(false);
+const [inCall, setInCall, channelName] = useState(false);
     
     return (
         <div className="outerContainer">
@@ -218,12 +218,12 @@ const [inCall, setInCall] = useState(false);
         </div>
         <div>
           {inCall ? (
-                <VideoCall setInCall={setInCall} />
+                <VideoCall setInCall={setInCall} channelName={channelName}/>
               ) : (
                 <Button
                   variant="contained"
                   color="primary"
-                  onClick={() => setInCall(true)}
+                  onClick={() {setInCall(true) channelName(room)}}
                 >
                   Join Call
                 </Button>
