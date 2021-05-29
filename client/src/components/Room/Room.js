@@ -153,7 +153,8 @@ const Room = ({ location, history, match }) => {
                     localAudioStream.init(); 
                     client.join('006c0fbe3dfdd7c45c8bedac54be5f4fc90IAC2D3taBFp4HZGh1n9EgqrSWAoS3Vu5JJR0qVBWzhlhkYun+iQAAAAAEADEZWnp3tCzYAEAAQDe0LNg', 'main', 'name');
                     client.publish(localAudioStream);
-                    document.querySelector('#remoteStream').play("body");
+                    const rs = document.querySelector('#remoteStream');
+                    rs.play("body");
                     
                     sckt.socket.emit('join', { name, room, colors }, ({ id }) => {
                         updateCurrUser({ id });
