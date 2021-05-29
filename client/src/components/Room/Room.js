@@ -215,20 +215,21 @@ const [inCall, setInCall, channelName] = useState(false);
                 users={users}
                 setUsers={setUsers}
             />
-        </div>
-        <div>
-          {inCall ? (
-                <VideoCall setInCall={setInCall} channelName={channelName}/>
+                    
+            <div>
+              {inCall ? (
+                <VideoCall setInCall={setInCall} />
               ) : (
                 <Button
                   variant="contained"
                   color="primary"
-                  onClick={() {setInCall(true) channelName(room)}}
+                  onClick={() => setInCall(true)}
                 >
                   Join Call
                 </Button>
               )}
-          </div>
+            </div>
+        </div>
     );
 }
 
