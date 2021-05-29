@@ -178,7 +178,9 @@ const Room = ({ location, history, match }) => {
     // useEffect(() => {
     //     console.log(videoProps.playing);
     // }, [videoProps.playing])
-
+    
+const [inCall, setInCall] = useState(false);
+    
     return (
         <div className="outerContainer">
             <Transition visible={!isJoined} animation='fade' duration={500}>
@@ -210,6 +212,20 @@ const Room = ({ location, history, match }) => {
                 users={users}
                 setUsers={setUsers}
             />
+        </div>
+        <div>
+          {inCall ? (
+                <VideoCall setInCall={setInCall} />
+              ) : (
+                <Button
+                  variant="contained"
+                  color="primary"
+                  onClick={() => setInCall(true)}
+                >
+                  Join Call
+                </Button>
+              )}
+            </div>
         </div>
     );
 }
