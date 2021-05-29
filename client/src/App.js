@@ -12,6 +12,9 @@ import { Button } from "@material-ui/core";
 import VideoCall from "./VideoCall";
 
 const App = () => (
+    
+    const [inCall, setInCall] = useState(false);
+    
     <div>
         <ReactNotification />
         <Router>
