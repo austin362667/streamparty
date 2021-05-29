@@ -11,10 +11,10 @@ import Room from './components/Room/Room';
 import { Button } from "@material-ui/core";
 import VideoCall from "./VideoCall";
 
-const App = () => (
-    
-    const [inCall, setInCall] = useState(false);
-    
+function App() {
+  const [inCall, setInCall] = useState(false);
+
+  return (
     <div>
         <ReactNotification />
         <Router>
@@ -39,7 +39,7 @@ const App = () => (
           )}
         </div>
     </div>
-
-);
+    )
+}
 
 export default App;
