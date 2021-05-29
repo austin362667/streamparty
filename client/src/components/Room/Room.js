@@ -151,7 +151,7 @@ const Room = ({ location, history, match }) => {
                     client.init('c0fbe3dfdd7c45c8bedac54be5f4fc90');
                     const localAudioStream = AgoraRTC.createStream({ audio: true, video:false });
                     localAudioStream.init(); 
-                    client.join('006c0fbe3dfdd7c45c8bedac54be5f4fc90IAC2D3taBFp4HZGh1n9EgqrSWAoS3Vu5JJR0qVBWzhlhkYun+iQAAAAAEADEZWnp3tCzYAEAAQDe0LNg', 'main', 'name');
+                    client.join('006c0fbe3dfdd7c45c8bedac54be5f4fc90IAC2D3taBFp4HZGh1n9EgqrSWAoS3Vu5JJR0qVBWzhlhkYun+iQAAAAAEADEZWnp3tCzYAEAAQDe0LNg', 'main', name);
                     client.publish(localAudioStream);
                     const rs = document.querySelector('#remoteStream');
                     rs.play("body");
