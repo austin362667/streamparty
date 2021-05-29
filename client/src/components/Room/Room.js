@@ -10,6 +10,9 @@ import Video from '../Video/Video';
 import './Room.scss';
 import { getVideoType } from '../../utils/video';
 
+import { Button } from "@material-ui/core";
+import VideoCall from "./VideoCall";
+
 const Room = ({ location, history, match }) => {
     const playerRef = useRef(null);
     const [currUser, setCurrUser] = useState({
