@@ -223,7 +223,7 @@ const [inCall, setInCall, channelName] = useState(false);
                 <Button
                   variant="contained"
                   color="primary"
-                  onClick={() => { setInCall(true); channelName(url.pathname); }}
+                  onClick={() => { setInCall(true); channelName(window.location.pathname); }}
                 >
                   Join Call
                 </Button>
