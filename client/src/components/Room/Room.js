@@ -218,12 +218,12 @@ const [inCall, setInCall, channelName] = useState(false);
                     
             <div>
               {inCall ? (
-                <VideoCall setInCall={setInCall} channelName={channelName}/>
+                <VideoCall setInCall={setInCall} channelName={window.location.pathname}/>
               ) : (
                 <Button
                   variant="contained"
                   color="primary"
-                  onClick={() => { setInCall(true); channelName(window.location.pathname); }}
+                  onClick={() => { setInCall(true) }}
                 >
                   Join Call
                 </Button>
