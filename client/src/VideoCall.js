@@ -3,14 +3,13 @@ import {
   config,
   useClient,
   useMicrophoneAndCameraTracks,
-  channelName,
 } from "./settings.js";
 import { Grid } from "@material-ui/core";
 import Video from "./Video";
 import Controls from "./Controls";
 
 export default function VideoCall(props) {
-  const { setInCall } = props;
+  const { setInCall, channelName } = props;
   const [users, setUsers] = useState([]);
   const [start, setStart] = useState(false);
   const client = useClient();
