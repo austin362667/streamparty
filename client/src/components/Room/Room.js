@@ -218,7 +218,7 @@ const [inCall, setInCall, channelName] = useState(false);
                     
             <div>
               {inCall ? (
-                <VideoCall setInCall={setInCall} channelName={window.location.pathname}/>
+                <VideoCall setInCall={setInCall} channelName={window.location.pathname.split('/')[2]}/>
               ) : (
                 <Button
                   variant="contained"
