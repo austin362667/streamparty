@@ -11,6 +11,9 @@ import './Room.scss';
 import { getVideoType } from '../../utils/video';
 import AgoraRTC from 'agora-rtc-sdk';
 
+let handleError = function(err){
+        console.log("Error: ", err);
+};
 
 const Room = ({ location, history, match }) => {
     const playerRef = useRef(null);
@@ -149,12 +152,27 @@ const Room = ({ location, history, match }) => {
 
                     const client = AgoraRTC.createClient({ mode: "rtc", codec: "vp8" });  
                     client.init('c0fbe3dfdd7c45c8bedac54be5f4fc90');
-                    const localAudioStream = AgoraRTC.createStream({ audio: true, video:false });
-                    localAudioStream.init(); 
+                    const localAudioStream = AgoraRTC.createStream({ audio: true, video: false });
+                    
                     client.join('006c0fbe3dfdd7c45c8bedac54be5f4fc90IAC2D3taBFp4HZGh1n9EgqrSWAoS3Vu5JJR0qVBWzhlhkYun+iQAAAAAEADEZWnp3tCzYAEAAQDe0LNg', 'main', name);
-                    client.publish(localAudioStream);
-                    const rs = document.querySelector('#remoteStream');
-                    rs.play("body");
+                    
+                    localAudioStream.init(()=>{
+                        // Play the local stream
+                        localAudioStream.play("me");
+                        // Publish the local stream
+                        client.publish(localAudioStream, handleError);
+                    }, handleError);
+
+                    // Subscribe to the remote stream when it is published
+                    client.on("stream-added", function(evt){
+                        client.subscribe(evt.stream, handleError);
+                    });
+                    // Play the remote stream when it is subsribed
+                    client.on("stream-subscribed", function(evt){
+                        let stream = evt.stream;
+                        let streamId = String(stream.getId());
+                        stream.play(streamId);
+                    });
                     
                     sckt.socket.emit('join', { name, room, colors }, ({ id }) => {
                         updateCurrUser({ id });
@@ -191,7 +209,7 @@ const Room = ({ location, history, match }) => {
     // }, [videoProps.playing])
 
     return (
-        <div className="outerContainer" id="remoteStream">
+        <div className="outerContainer" id="me">
             <Transition visible={!isJoined} animation='fade' duration={500}>
                 <Dimmer active={!isJoined}>
                     <Loader>Joining Room...</Loader>
