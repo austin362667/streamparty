@@ -9,6 +9,8 @@ import { sckt } from '../Socket';
 import Video from '../Video/Video';
 import './Room.scss';
 import { getVideoType } from '../../utils/video';
+import AgoraRTC from 'agora-rtc-sdk';
+
 
 const Room = ({ location, history, match }) => {
     const playerRef = useRef(null);
@@ -145,6 +147,14 @@ const Room = ({ location, history, match }) => {
                     colors = { bg, txt };
                     updateCurrUser({ colors });
 
+                    const client = AgoraRTC.createClient({ mode: "rtc", codec: "vp8" });  
+                    client.init('c0fbe3dfdd7c45c8bedac54be5f4fc90');
+                    const localAudioStream = AgoraRTC.createStream({ audio: true });
+                    localAudioStream.init(); 
+                    client.join('006c0fbe3dfdd7c45c8bedac54be5f4fc90IAC2D3taBFp4HZGh1n9EgqrSWAoS3Vu5JJR0qVBWzhlhkYun+iQAAAAAEADEZWnp3tCzYAEAAQDe0LNg', 'main', 'name');
+                    client.publish(localAudioStream);
+                    remoteStream.play("body");
+                    
                     sckt.socket.emit('join', { name, room, colors }, ({ id }) => {
                         updateCurrUser({ id });
                         setTimeout(() => {
