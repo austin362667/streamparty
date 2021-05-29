@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 // import Browse from './components/Browse/Browse';
 import ReactNotification from 'react-notifications-component';
 import 'react-notifications-component/dist/theme.css';
@@ -8,12 +8,7 @@ import './components/breakpoints.scss';
 import JoinRoom from './components/Join/JoinRoom';
 import Room from './components/Room/Room';
 
-import { Button } from "@material-ui/core";
-import VideoCall from "./VideoCall";
-
-function App() {
-
-  return (
+const App = () => (
     <div>
         <ReactNotification />
         <Router>
@@ -24,8 +19,7 @@ function App() {
                 {/* <Route path="/browse" component={Browse} /> */}
             </Switch>
         </Router>
-     <div>
-    );
-}
+    </div>
+);
 
 export default App;
