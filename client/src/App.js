@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 // import Browse from './components/Browse/Browse';
 import ReactNotification from 'react-notifications-component';
 import 'react-notifications-component/dist/theme.css';
@@ -7,6 +7,8 @@ import 'semantic-ui-css/semantic.min.css';
 import './components/breakpoints.scss';
 import JoinRoom from './components/Join/JoinRoom';
 import Room from './components/Room/Room';
+
+import { Button } from "@material-ui/core";
 import VideoCall from "./VideoCall";
 
 const App = () => (
