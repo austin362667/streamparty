@@ -46,6 +46,9 @@ const Browse = ({ history }) => {
                                                 <FontAwesomeIcon id='verifiedIcon' icon="check-circle" size="sm" />
                                             } */}
                                         </div>
+                                        <button onClick={() => joinRoom()}>
+                                            加入此房間    
+                                        </button>
                                     </div>
                                 </div>
                             </li>
