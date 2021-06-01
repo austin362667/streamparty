@@ -44,7 +44,7 @@ const JoinRoom = ({ location, history }) => {
                             className='button-join'
                             onClick={()=>joinRoom}
                         />
-                        <Spacer width='12px' />
+                        <Spacer width='48px' />
                         <Button
                             content='瀏覽熱門房間'
                             // icon='sign-in'
