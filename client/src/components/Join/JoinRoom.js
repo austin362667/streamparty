@@ -42,7 +42,7 @@ const JoinRoom = ({ location, history }) => {
                             // icon='sign-in'
                             // labelPosition='right'
                             className='button-join'
-                            onClick={()=>{joinRoom}}
+                            onClick={joinRoom}
                         />
                         <Spacer width='12px' />
                         <Button
@@ -50,7 +50,7 @@ const JoinRoom = ({ location, history }) => {
                             // icon='sign-in'
                             // labelPosition='right'
                             className='button-join'
-                            onClick={()=>{browse}}
+                            onClick={browse}
                         />
                     </section>
                 </div >
