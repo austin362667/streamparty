@@ -10,3 +10,15 @@
     margin-top: 50px;
   }
 }
+.button-join {
+  color: #1b1b1b !important;
+  background: #40E0D0 !important;
+  padding: 15px 20px !important;
+  border-radius: 30px !important;
+  width: 80%;
+  box-shadow: 0 2px 6px 0 hsla(0, 0%, 0%, 0.2) !important;
+  transition: all 0.2s;
+  &:hover {
+    opacity: 0.9;
+  }
+}
