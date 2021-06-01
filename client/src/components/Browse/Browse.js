@@ -5,16 +5,16 @@ import './Browse.scss';
 const Browse = ({ history }) => {
     const [room, setRoom] = useState('');
     const [allRoomData, setAllRoomData] = useState([]);
-
     useEffect(() => {
         sckt.socket.emit('getAllRoomData', (error) => { });
         sckt.socket.on("allRoomData", ({ allRoomData }) => {
             setAllRoomData(allRoomData);
         });
     });
+    console.log(room);
 
-    const joinRoom = () => {
-        let trimmedRoom = room.trim();
+    const joinRoom = (joinRoom) => {
+        let trimmedRoom = joinRoom.trim();
         if (trimmedRoom.length > 0) {
             history.push(`/room/${trimmedRoom}`);
         }
@@ -46,7 +46,7 @@ const Browse = ({ history }) => {
                                                 <FontAwesomeIcon id='verifiedIcon' icon="check-circle" size="sm" />
                                             } */}
                                         </div>
-                                        <button onClick={() => joinRoom()}>
+                                        <button onClick={() => joinRoom(room)}>
                                             加入此房間    
                                         </button>
                                     </div>
