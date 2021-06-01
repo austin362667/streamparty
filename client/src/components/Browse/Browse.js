@@ -12,7 +12,7 @@ const Browse = ({ history }) => {
             setAllRoomData(allRoomData);
         });
     });
-    console.log(room);
+//     console.log(room);
 
     const joinRoom = (joinRoom) => {
         let trimmedRoom = joinRoom.trim();
@@ -41,7 +41,7 @@ const Browse = ({ history }) => {
                                             {room.currVideo.video.title}
                                         </h3>
                                         <div className="search-item-channel-date">
-                                            {room.currVideo.channel.numUsers} 位玩家在裡面
+                                            {room.numUsers} 位玩家在裡面
                                             {/* {
                                                 room.currVideo.channel.verified &&
                                                 <FontAwesomeIcon id='verifiedIcon' icon="check-circle" size="sm" />
