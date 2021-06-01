@@ -3,6 +3,7 @@ import { Button, Transition } from 'semantic-ui-react';
 import { generateWords } from '../../utils/generateWords';
 import Logo from '../Logo/Logo';
 import './Join.scss';
+const Spacer = require('react-spacer')
 
 const JoinRoom = ({ location, history }) => {
     const [mounted, setMounted] = useState(false);
@@ -43,6 +44,7 @@ const JoinRoom = ({ location, history }) => {
                             className='button-join'
                             onClick={()=>{joinRoom}}
                         />
+                        <Spacer width='12px' />
                         <Button
                             content='瀏覽熱門房間'
                             // icon='sign-in'
