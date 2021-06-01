@@ -100,21 +100,21 @@ io.on('connection', (socket) => {
     //     const currRoom = Object.keys(socket.rooms).filter(item => item != socket.id)[0];
     //     currVideo[currRoom] = video;
     // })
-    // socket.on('getAllRoomData', ({ }, callback) => {
-    //     let rooms = getActiveRooms(io);
-    //     let allRoomData = [];
-    //     for (const currRoom of rooms) {
-    //         let data = {
-    //             room: currRoom,
-    //             numUsers: getUsersInRoom(currRoom).length,
-    //             currVideo: currVideo[currRoom]
-    //         }
-    //         allRoomData.push(data);
-    //     }
-    //     socket.emit('allRoomData', {
-    //         allRoomData
-    //     });
-    // });
+    socket.on('getAllRoomData', ({ }, callback) => {
+        let rooms = getActiveRooms(io);
+        let allRoomData = [];
+        for (const currRoom of rooms) {
+            let data = {
+                room: currRoom,
+                numUsers: getUsersInRoom(currRoom).length,
+                currVideo: currVideo[currRoom]
+            }
+            allRoomData.push(data);
+        }
+        socket.emit('allRoomData', {
+            allRoomData
+        });
+    });
 
     /** SENDING MESSAGES */
     socket.on('sendMessage', (message, callback) => {
