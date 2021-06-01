@@ -107,7 +107,7 @@ io.on('connection', (socket) => {
             let data = {
                 room: currRoom,
                 numUsers: getUsersInRoom(currRoom).length,
-                currVideo: currVideo[currRoom]
+                currVideo: currVideo[currRoom]?currVideo[currRoom]:"not playing"
             }
             allRoomData.push(data);
         }
