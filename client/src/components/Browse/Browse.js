@@ -40,7 +40,7 @@ const Browse = ({ history }) => {
                                             {room.currVideo.video.title}
                                         </h3>
                                         <div className="search-item-channel-date">
-                                            {room.currVideo.channel.username}
+                                            {room.currVideo.channel.numUsers} 位玩家在裡面
                                             {/* {
                                                 room.currVideo.channel.verified &&
                                                 <FontAwesomeIcon id='verifiedIcon' icon="check-circle" size="sm" />
@@ -49,7 +49,7 @@ const Browse = ({ history }) => {
                                         <Button 
                                             className='button-join'
                                             onClick={() => joinRoom(room.room)}
-                                            content='加入此房間    
+                                            content='加入此房間'
                                         />
                                     </div>
                                 </div>
