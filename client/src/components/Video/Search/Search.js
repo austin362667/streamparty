@@ -123,7 +123,7 @@ const VideoSearch = ({ addVideoToQueue, playVideoFromSearch, updateVideoProps })
                 fluid
                 id='searchInput'
                 size='large'
-                placeholder='Search a YouTube video or paste a video link...'
+                placeholder='搜尋 YouTube 或 貼上連結'
                 value={searchInput}
                 onChange={e => setSearchInput(e.target.value)}
                 onKeyPress={e => e.key === 'Enter' ? handlePlay(e) : null}
