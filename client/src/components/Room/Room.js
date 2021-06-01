@@ -77,7 +77,7 @@ const Room = ({ location, history, match }) => {
                 updateVideoProps({ playing: true });
                 updateVideoProps({ receiving: false });
             }
-            // sckt.socket.emit('updateRoomData', { video: searchItem }, (error) => { });
+            sckt.socket.emit('updateRoomData', { video: searchItem }, (error) => { });
         }
     }
     const playVideoFromSearch = (searchItem) => {
