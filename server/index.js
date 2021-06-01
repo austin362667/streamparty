@@ -96,10 +96,10 @@ io.on('connection', (socket) => {
         let rooms = getActiveRooms(io);
         return callback(rooms.includes(room));
     });
-    // socket.on('updateRoomData', ({ video }, callback) => {
-    //     const currRoom = Object.keys(socket.rooms).filter(item => item != socket.id)[0];
-    //     currVideo[currRoom] = video;
-    // })
+    socket.on('updateRoomData', ({ video }, callback) => {
+        const currRoom = Object.keys(socket.rooms).filter(item => item != socket.id)[0];
+        currVideo[currRoom] = video;
+    })
     socket.on('getAllRoomData', ({ }, callback) => {
         let rooms = getActiveRooms(io);
         let allRoomData = [];
