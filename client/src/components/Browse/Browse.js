@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { sckt } from '../Socket';
 import './Browse.scss';
+import { Button } from 'semantic-ui-react';
 
 const Browse = ({ history }) => {
     const [room, setRoom] = useState('');
