@@ -15,6 +15,14 @@ const JoinRoom = ({ location, history }) => {
             state: { from: location }
         });
     };
+    
+    const browse = () => {
+       
+        history.push({
+            pathname: `/browse`,
+            state: { from: location }
+        });
+    };
     // const browseRooms = () => {
     //     history.push(`/browse`);
     // }
@@ -33,14 +41,14 @@ const JoinRoom = ({ location, history }) => {
                             // icon='sign-in'
                             // labelPosition='right'
                             className='button-join'
-                            onClick={joinRoom}
+                            onClick={()=>{joinRoom}}
                         />
                         <Button
                             content='瀏覽熱門房間'
                             // icon='sign-in'
                             // labelPosition='right'
                             className='button-join'
-                            onClick={()=>{location.href = '/browse';}}
+                            onClick={()=>{browse}}
                         />
                     </section>
                 </div >
