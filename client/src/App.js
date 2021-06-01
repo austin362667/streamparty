@@ -7,6 +7,7 @@ import 'semantic-ui-css/semantic.min.css';
 import './components/breakpoints.scss';
 import JoinRoom from './components/Join/JoinRoom';
 import Room from './components/Room/Room';
+import Browse from './components/Browse/Browse';
 
 const App = () => (
     <div>
