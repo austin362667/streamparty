@@ -16,8 +16,8 @@ const App = () => (
             <Switch>
                 <Route path="/" exact component={JoinRoom} />
                 <Route path="/room/:roomName" component={Room} />
-                <Redirect to="/" />
                 <Route path="/browse" component={Browse} />
+                <Redirect to="/" />
             </Switch>
         </Router>
     </div>
