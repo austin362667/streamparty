@@ -215,21 +215,8 @@ const [inCall, setInCall, channelName] = useState(false);
                 users={users}
                 setUsers={setUsers}
             />
-                    
-//             <div>
-//               {inCall ? (
-//                 <VideoCall setInCall={setInCall} channelName={"main"}/>//window.location.pathname.split('/')[2]
-//               ) : (
-//                 <Button
-//                   variant="contained"
-//                   color="primary"
-//                   onClick={() => { setInCall(true) }}
-//                 >
-//                   Join Call
-//                 </Button>
-//               )}
-//             </div>
         </div>
+
     );
 }
 
