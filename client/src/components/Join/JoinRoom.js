@@ -29,11 +29,18 @@ const JoinRoom = ({ location, history }) => {
                             <h2>與遙遠的朋友一起看影片，重新定義派對的極限！</h2>
                         </div>
                         <Button
-                            content='Create a New Room'
+                            content='建立新房間'
                             // icon='sign-in'
                             // labelPosition='right'
                             className='button-join'
                             onClick={joinRoom}
+                        />
+                        <Button
+                            content='瀏覽熱門房間'
+                            // icon='sign-in'
+                            // labelPosition='right'
+                            className='button-join'
+                            onClick={()=>{location.href = '/browse';}}
                         />
                     </section>
                 </div >
