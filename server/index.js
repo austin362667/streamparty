@@ -34,7 +34,7 @@ require('dotenv').config()
 
 app.use(express.static(path.join(__dirname, 'build')));
 
-// let currVideo = {}; // Video playing in room
+let currVideo = {}; // Video playing in room
 
 io.on('connection', (socket) => {
     console.log('New Connection');
