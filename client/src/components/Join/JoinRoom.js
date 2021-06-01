@@ -26,7 +26,7 @@ const JoinRoom = ({ location, history }) => {
                     <Logo />
                     <section>
                         <div className="mid">
-                            <h2>Watch videos with friends and family from far away!</h2>
+                            <h2>與遙遠的朋友一起看影片，重新定義派對的極限！</h2>
                         </div>
                         <Button
                             content='Create a New Room'
