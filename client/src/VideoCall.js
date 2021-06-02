@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import {
   config,
   useClient,
-  useMicrophoneAndCameraTracks,
+  useMicrophone,
 } from "./settings.js";
 import { Grid } from "@material-ui/core";
 import Video from "./Video";
