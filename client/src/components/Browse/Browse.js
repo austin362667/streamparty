@@ -34,14 +34,14 @@ const Browse = ({ history }) => {
                             <li className="list-group-item">
                                 <div className="search-item-container">
                                     <div className="search-item-thumb">
-                                        <img src={room.currVideo.video.thumbnail} />
+                                        {room.currVideo == "not playing"? <img src={'https://i.pinimg.com/originals/a2/dc/96/a2dc9668f2cf170fe3efeb263128b0e7.gif'} />:<img src={room.currVideo.video.thumbnail} />}
                                     </div>
                                     <div className="search-item-body">
                                         <h3 className="search-item-video-title">
-                                            {room.currVideo.video.title}
+                                            {room.currVideo == "not playing"? '尚未開始放映！':room.currVideo.video.title}
                                         </h3>
                                         <div className="search-item-channel-date">
-                                            {room.numUsers} 位玩家在裡面
+                                            {room.numUsers} 位觀眾
                                             {/* {
                                                 room.currVideo.channel.verified &&
                                                 <FontAwesomeIcon id='verifiedIcon' icon="check-circle" size="sm" />
