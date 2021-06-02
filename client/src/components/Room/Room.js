@@ -185,6 +185,7 @@ const Room = ({ location, history, match }) => {
 const [inCall, setInCall, channelName] = useState(false);
     
     return (
+<div>
         <div className="outerContainer">
             <Transition visible={!isJoined} animation='fade' duration={500}>
                 <Dimmer active={!isJoined}>
@@ -230,6 +231,7 @@ const [inCall, setInCall, channelName] = useState(false);
             </Button>
           )}
         </div>
+</div>
 
     );
 }
