@@ -10,7 +10,7 @@ import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 export default function Controls(props) {
   const client = useClient();
   const { tracks, setStart, setInCall } = props;
-  const [trackState, setTrackState] = useState({ video: true, audio: true });
+  const [trackState, setTrackState] = useState({ video: false, audio: true });
 
   const mute = async (type) => {
     if (type === "audio") {
