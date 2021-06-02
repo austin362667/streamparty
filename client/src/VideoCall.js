@@ -72,9 +72,6 @@ export default function VideoCall(props) {
           <Controls tracks={tracks} setStart={setStart} setInCall={setInCall} />
         )}
       </Grid>
-//       <Grid item style={{ height: "95%" }}>
-//         {start && tracks && <Video tracks={tracks} users={users} />}
-//       </Grid>
     </Grid>
   );
 }
