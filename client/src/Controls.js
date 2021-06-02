@@ -46,15 +46,15 @@ export default function Controls(props) {
           {trackState.audio ? <MicIcon /> : <MicOffIcon />}
         </Button>
       </Grid>
-      <Grid item>
-        <Button
-          variant="contained"
-          color={trackState.video ? "primary" : "secondary"}
-          onClick={() => mute("video")}
-        >
-          {trackState.video ? <VideocamIcon /> : <VideocamOffIcon />}
-        </Button>
-      </Grid>
+//       <Grid item>
+//         <Button
+//           variant="contained"
+//           color={trackState.video ? "primary" : "secondary"}
+//           onClick={() => mute("video")}
+//         >
+//           {trackState.video ? <VideocamIcon /> : <VideocamOffIcon />}
+//         </Button>
+//       </Grid>
       <Grid item>
         <Button
           variant="contained"
