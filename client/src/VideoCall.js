@@ -13,7 +13,7 @@ export default function VideoCall(props) {
   const [users, setUsers] = useState([]);
   const [start, setStart] = useState(false);
   const client = useClient();
-  const { ready, tracks } = useMicrophoneAndCameraTracks();
+  const { ready, tracks } = useMicrophone();// AndCameraTracks();
 
   useEffect(() => {
     let init = async (name) => {
