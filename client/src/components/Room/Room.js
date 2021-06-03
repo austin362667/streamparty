@@ -185,7 +185,6 @@ const Room = ({ location, history, match }) => {
 const [inCall, setInCall, channelName] = useState(false);
     
     return (
-<div>
         <div className="outerContainer">
             <Transition visible={!isJoined} animation='fade' duration={500}>
                 <Dimmer active={!isJoined}>
@@ -216,8 +215,6 @@ const [inCall, setInCall, channelName] = useState(false);
                 users={users}
                 setUsers={setUsers}
             />
-
-        </div>
         <div>
           {inCall ? (
             <VideoCall setInCall={setInCall} channelName={"main"}/>//window.location.pathname.split('/')[2]
@@ -231,7 +228,7 @@ const [inCall, setInCall, channelName] = useState(false);
             </Button>
           )}
         </div>
-</div>
+        </div>
 
     );
 }
