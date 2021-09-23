@@ -38,7 +38,7 @@ const Browse = ({ history }) => {
                                     </div>
                                     <div className="search-item-body">
                                         <h3 className="search-item-video-title">
-                                            {room.currVideo == "not playing"? '活躍！':room.currVideo.video.title}
+                                            {room.currVideo == "not playing"? '運作中..':room.currVideo.video.title}
                                         </h3>
                                         <div className="search-item-channel-date">
                                             {room.numUsers} 位同學
