@@ -38,10 +38,10 @@ const Browse = ({ history }) => {
                                     </div>
                                     <div className="search-item-body">
                                         <h3 className="search-item-video-title">
-                                            {room.currVideo == "not playing"? '尚未開始放映！':room.currVideo.video.title}
+                                            {room.currVideo == "not playing"? '活躍！':room.currVideo.video.title}
                                         </h3>
                                         <div className="search-item-channel-date">
-                                            {room.numUsers} 位觀眾
+                                            {room.numUsers} 位同學
                                             {/* {
                                                 room.currVideo.channel.verified &&
                                                 <FontAwesomeIcon id='verifiedIcon' icon="check-circle" size="sm" />
@@ -50,7 +50,7 @@ const Browse = ({ history }) => {
                                         <Button 
                                             className='button-join'
                                             onClick={()=>{joinRoom(room.room)}}
-                                            content='加入此房間'
+                                            content='訪客加入'
                                         />
                                     </div>
                                 </div>
