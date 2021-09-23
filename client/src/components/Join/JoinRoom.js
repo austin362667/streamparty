@@ -35,7 +35,8 @@ const JoinRoom = ({ location, history }) => {
                     <Logo />
                     <section>
                         <div className="mid">
-                            <h2>與遙遠的朋友一起看影片，重新定義派對的極限！</h2>
+                            <h2>「大學期間，我在打橋牌的過程中略領企業經營之道。」</h2>
+                            <h4> By Morris Chang (a.k.a. 張忠謀博士)</h4>
                         </div>
                         <Button
                             content='建立新房間'
