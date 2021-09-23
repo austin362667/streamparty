@@ -74,18 +74,6 @@ const Panel = ({
         },
         {
             menuItem: (
-                <Menu.Item key='video'>
-                    <Icon name='video' />
-                </Menu.Item>
-            ),
-            pane: (
-                <Tab.Pane key='videos'>
-                    <Tab panes={videoPanes} renderActiveOnly={false} className="subTabs" />
-                </Tab.Pane>
-            ),
-        },
-        {
-            menuItem: (
                 <Menu.Item key='users'>
                     <Icon name='users' />{users.length}
                 </Menu.Item>
