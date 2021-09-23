@@ -4,8 +4,8 @@ import './Logo.scss';
 const Logo = () => (
     <div className="logoContainer">
         <h1>
-            <span className="primaryColor">直播</span>
-            <span className="secondaryColor">派對</span>
+            <span className="primaryColor">OO</span>
+            <span className="secondaryColor">XX</span>
         </h1>
     </div>
 );
