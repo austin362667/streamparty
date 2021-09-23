@@ -1,4 +1,4 @@
-import { AgoraVideoPlayer } from "agora-rtc-react";
+// import { AgoraVideoPlayer } from "agora-rtc-react";
 import { Grid } from "@material-ui/core";
 import React, { useState, useEffect } from "react";
 
@@ -17,21 +17,21 @@ export default function Video(props) {
           videoTrack={tracks[1]}
           style={{ height: "100%", width: "100%" }}
         />
-      </Grid>
-      {users.length > 0 &&
-        users.map((user) => {
-          if (user.videoTrack) {
-            return (
-              <Grid item xs={gridSpacing}>
-                <AgoraVideoPlayer
-                  videoTrack={user.videoTrack}
-                  key={user.uid}
-                  style={{ height: "100%", width: "100%" }}
-                />
-              </Grid>
-            );
-          } else return null;
-        })}
-    </Grid>
+//       </Grid>
+//       {users.length > 0 &&
+//         users.map((user) => {
+//           if (user.videoTrack) {
+//             return (
+//               <Grid item xs={gridSpacing}>
+//                 <AgoraVideoPlayer
+//                   videoTrack={user.videoTrack}
+//                   key={user.uid}
+//                   style={{ height: "100%", width: "100%" }}
+//                 />
+//               </Grid>
+//             );
+//           } else return null;
+//         })}
+//     </Grid>
   );
 }
