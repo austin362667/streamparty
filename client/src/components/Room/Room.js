@@ -191,17 +191,17 @@ const [inCall, setInCall, channelName] = useState(false);
                     <Loader>Joining Room...</Loader>
                 </Dimmer>
             </Transition>
-            <Video 
-                log={log}
-                currUser={currUser}
-                room={room}
-                videoProps={videoProps}
-                updateVideoProps={updateVideoProps}
-                playerRef={playerRef}
-                sendVideoState={sendVideoState}
-                loadVideo={loadVideo}
-                playVideoFromSearch={playVideoFromSearch}
-            />
+//             <Video 
+//                 log={log}
+//                 currUser={currUser}
+//                 room={room}
+//                 videoProps={videoProps}
+//                 updateVideoProps={updateVideoProps}
+//                 playerRef={playerRef}
+//                 sendVideoState={sendVideoState}
+//                 loadVideo={loadVideo}
+//                 playVideoFromSearch={playVideoFromSearch}
+//             />
             <Panel
                 currUser={currUser}
                 updateCurrUser={updateCurrUser}
